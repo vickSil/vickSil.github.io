@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vitória Silva — Portfólio</title>
+  <meta name="description" content="Portfólio e hub pessoal de projetos, notas e contatos." />
+  <meta property="og:title" content="Vitória Silva — Portfólio" />
+  <meta property="og:description" content="Projetos, artigos, currículo e contato." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#111827" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">  
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ <!--CUSTOM CURSOR--> 
+ <div class="custom-cursor">
+    <div class="cursor-dot"></div>
+ </div>
+ 
+<!--BACKGROUND STARS-->
+<div class="star" id="stars"></div>
+<div  class="star" id="stars2"></div>
+<div  class="star" id="stars3"></div>
+  
+  <header>
+    <div class="container">
+      <nav aria-label="primária">
+        <a href="#" class="brand" aria-label="Voltar ao topo">
+         <!-- <img id="logo-navigator" src="V__2_-removebg-preview.png" alt="Logo do Portfólio Vitória Silva">  --> 
+        </a>
+        <div class="nav-links" role="navigation">
+          <a href="#projetos">Projetos</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#contato">Contato</a>
+          <button id="themeToggle" class="btn" aria-label="Alternar tema">🌓</button>
+        </div>
+      </nav>
+    </div>
+    </header>
+   <!--TYPEWRITING EFFECT AND PERSONAL PHOTO-->
+   <div class="intro">
+      <div class="main-effect"><span id='text'></span>
+        <div class='console-underscore' id='console'>&#95;
+      </div></div>
+      
+      <div class="personalPhoto">
+        <img src="bitmap.png" alt="Vitória Silva">
+          <div class="links-photo">
+            <a href="#projetos">Projetos</a>
+            <a href="https://github.com/vickSil">Github</a>
+            <a href="https://www.linkedin.com/in/vit%C3%B3ria-silva-2821ab1a8/">Linkedin</a>
+          </div>
+      </div>
+    </div>
+ 
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="container wrap">
+        <div>
+          <h1>Engenharia da Computação @ UFC — Portfólio & Hub Pessoal</h1>
+          <p>Projetos em <strong>C/Python/JS</strong>, sistemas embarcados (BeagleBone), e VHDL. Interesso-me por produtos com impacto real, dados e backends bem feitos. Aqui você encontra meus projetos, notas rápidas e formas de contato.</p>
+          <div class="grid" style="grid-template-columns: auto auto auto; gap: 10px; margin-top: 14px;">
+            <a class="btn primary" href="#projetos">Ver Projetos</a>
+            <a class="btn" href="VitoriaSilva-CV.pdf" download>Baixar CV</a>
+            <a class="btn" href="#contato">Contato</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="muted" style="margin-bottom:8px;">Status rápido</div>
+          <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 10px;">
+            <div class="note"><strong>Buscando:</strong><br/>Estágio em dev/web/embarcados</div>
+            <div class="note"><strong>Último projeto:</strong><br/><span id="lastProject">—</span></div>
+            <div class="note"><strong>Techs:</strong><br/>C • Python • JS • VHDL</div>
+            <div class="note"><strong>Cidade:</strong><br/>Quixadá, CE</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Projetos ===== -->
+    <section id="projetos">
+      <div class="container">
+        <h2>Projetos</h2>
+        <p class="muted">Seleção de projetos pessoais e acadêmicos. Filtre por tag, pesquise por nome e ordene.</p>
+
+        <div class="toolbar" role="region" aria-label="Ferramentas de busca e filtro">
+          <input id="search" class="input" type="search" placeholder="Pesquisar projetos…" aria-label="Pesquisar projetos" />
+          <select id="sort" class="select" aria-label="Ordenar">
+            <option value="recent">Mais recentes</option>
+            <option value="az">A–Z</option>
+            <option value="stars">Com mais destaque</option>
+          </select>
+          <div id="tagsBar" class="grid" style="grid-auto-flow: column; grid-auto-columns: max-content; gap:8px; overflow:auto; padding-bottom:4px;" aria-label="Tags"></div>
+        </div>
+
+        <div id="cards" class="cards" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ===== Sobre ===== -->
+    <section id="sobre">
+      <div class="container">
+        <h2>Sobre</h2>
+        <div class="grid" style="grid-template-columns: 1.15fr .85fr;">
+          <div class="card">
+            <p>Sou estudante do 6º semestre de Engenharia da Computação na Universidade Federal do Ceará (UFC)
+               e formada em Técnico em Desenvolvimento de Sistemas e Informática para Internet 
+               pelo SENAI Manuel Garcia Filho. Tenho interesse especial em desenvolvimento de 
+               software e já trabalhei com programação em C, HTML, CSS, JavaScript, PHP e SQL.</p>
+            <p>Possuo experiência prática em projetos acadêmicos e pessoais, 
+              como controle de hardware via GPIO na BeagleBone Black, atualização 
+              em tempo real de interfaces com SSE e implementação de instruções em 
+              VHDL para um processador didático. Também atuei como Jovem Aprendiz na 
+              SCANIA Latin America, onde aprimorei habilidades em suporte técnico, 
+              manutenção de sistemas e atendimento ao cliente.</p>
+            <p>Gosto de transformar ideias em soluções simples e funcionais. Fora do código, 
+              tenho prazer em compartilhar conhecimento, mentorando iniciantes e registrando 
+              aprendizados em forma de notas e artigos.</p>
+
+          </div>
+          <div class="card">
+            <p class="muted">Links</p>
+            <div class="grid" style="grid-template-columns: 1fr;">
+              <a class="btn" href="#" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="btn" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a class="btn" href="mailto:seuemail@exemplo.com">Email</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contato ===== -->
+    <section id="contato">
+      <div class="container">
+        <h2>Contato</h2>
+        <p class="muted">Para oportunidades, dúvidas ou colabs. (Este formulário é apenas UI — troque por um serviço real como Formspree, Netlify Forms ou backend próprio.)</p>
+        <form class="card" action="https://formspree.io/f/mjkepeqj" method="POST">
+          <div class="grid" style="grid-template-columns: 1fr 1fr;">
+            <label>Nome
+              <input class="input" required placeholder="Seu nome" />
+            </label>
+            <label>Email
+              <input name="email" class="input" type="email" required placeholder="voce@exemplo.com" />
+            </label>
+          </div>
+          <label>Assunto
+            <input class="input" required placeholder="Assunto" />
+          </label>
+          <label>Mensagem
+            <textarea name="message" class="input" rows="5" required placeholder="Escreva sua mensagem…"></textarea>
+          </label>
+          <div class="grid" style="grid-auto-flow: column; justify-content: start; gap: 10px;">
+            <button class="btn primary" type="submit">Enviar</button>
+            <button class="btn" type="reset">Limpar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>© <span id="year"></span> Vitória Silva. Feito com HTML • CSS • JS. <span aria-hidden>❇️</span></small>
+    </div>
+  </footer>
+
+  <!-- ===== Modal (detalhes do projeto) ===== -->
+  <dialog id="projectDialog" aria-labelledby="dialogTitle">
+    <div class="dialog-header">
+      <strong id="dialogTitle">Detalhes do projeto</strong>
+      <button class="btn" onclick="projectDialog.close()" aria-label="Fechar">✕</button>
+    </div>
+    <div class="dialog-body" id="dialogBody"></div>
+  </dialog>
+
+<script src="script.js"></script>
+
+</body>
+</html>
